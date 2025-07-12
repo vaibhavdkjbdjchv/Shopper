@@ -1,6 +1,5 @@
 import React from "react";
 import SearchbBar from "../Components/searchbar/SearchbBar";
-import ProductData from "../assets/ProductData/ProductData";
 import { FaStar } from "react-icons/fa";
 import TopProduct from "../Components/topProduct/TopProduct";
 import images from "../assets/Images/images";
@@ -11,7 +10,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Navbar from "../Components/Navbar/Navbar";
 import Contect from "../Components/Navbar/Contect";
 import Footer from "../Components/Footer/Footer";
-import ProductsPage from "../Components/demo";
 
 function Product() {
   return (
@@ -31,38 +29,9 @@ function Product() {
         <h1 className="text-3xl font-bold h-[20%] flex justify-center items-center text-center">
           Top Products
         </h1>
-        <div className="h-[90%] w-full flex justify-center items-center ">
-          <div className="px-2">
-            <FontAwesomeIcon
-              icon={faArrowLeft}
-              className="bg-black text-white p-5 text-lg rounded-full "
-            />
-          </div>
+        <div className="h-[90%]  w-full flex justify-center items-center ">
           <div className="w-[95%] h-full px-5 scroll-smooth flex  justify-between py-5 items-center gap-4">
-            <TopProduct
-              ProductName="Women Dress"
-              Des="Stylish and comfortable top made from high-quality fabric."
-              Price="$100"
-              ImageSrc={images.Wome11}
-            />
-            <TopProduct
-              ProductName="Men T-Shirt"
-              Des="Comfortable and stylish t-shirt made from high-quality cotton."
-              Price="$30"
-              ImageSrc={images.MensShirt}
-            />
-            <TopProduct
-              ProductName="women T-Shirt"
-              Des="Stylish and comfortable t-shirt made from breathable fabric."
-              Price="$50"
-              ImageSrc={images.Wome6}
-            />
-          </div>
-          <div className="px-2">
-            <FontAwesomeIcon
-              icon={faArrowRight}
-              className=" bg-black text-white p-5 text-lg rounded-full "
-            />
+            <TopProduct />
           </div>
         </div>
       </div>
@@ -99,10 +68,6 @@ function Product() {
       </div>
       <div className="w-screen h-[30%]">
         <Footer />
-      </div>
-
-      <div className="w-screen h-screen flex justify-center items-center">
-        <ProductsPage />
       </div>
     </div>
   );

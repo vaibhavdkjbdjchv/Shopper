@@ -8,7 +8,7 @@ import Product from "./Pages/Product";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SelectedProduct from "./Pages/SelectedProduct";
 import Footer from "./Components/Footer/Footer";
-// import AddProduct from "./Pages/Admin/AddProduct";
+import AddProduct from "./Pages/Admin/AddProducts";
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
           <Route path="/Aboutus" element={<AboutUs />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/selectedproduct" element={<SelectedProduct />} />
-          {/* <Route path="/AddProduct" element={<AddProduct />} /> */}
+          <Route path="/AddProduct" element={<AddProduct />} />
         </Routes>
       </Router>
     </CategoryProvider>

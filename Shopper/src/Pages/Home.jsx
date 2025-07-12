@@ -8,6 +8,8 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { CategoryContext } from "../Components/category/CategoryContext";
 import { delay, motion } from "motion/react";
 import Footer from "../Components/Footer/Footer";
+import TopProduct from "../Components/topProduct/TopProduct";
+import NewestProduct from "../Components/newproduct/NewProduct";
 function Home() {
   const { selectedCategory, setSelectedCategory } = useContext(CategoryContext);
 
@@ -101,7 +103,7 @@ function Home() {
             Popular In Mens
           </motion.h1>
           <div className="flex w-[90%] justify-center">
-            {filteredImages.map((item, index) => (
+            {/* {filteredImages.map((item, index) => (
               <div
                 key={index}
                 className=" w-[20%] hover:shadow-2xl duration-700 rounded-3xl p-5 flex flex-col text-center justify-center items-center"
@@ -127,7 +129,8 @@ function Home() {
                   {item.price}
                 </p>
               </div>
-            ))}
+            ))} */}
+            <TopProduct />
           </div>
         </div>
         <div className="w-full mt-5 bg-[#ffefb0f5] h-[45%]  flex justify-center items-center">
@@ -159,7 +162,7 @@ function Home() {
       <div className="w-screen h-screen">
         <div className="h-[70%]">
           <h1 className="text-4xl font-bold text-center"> New Collection</h1>
-          <div className="w-full flex justify-center items-center py-10">
+          {/* <div className="w-full flex justify-center items-center py-10">
             <div className="w-[90%] flex justify-evenly">
               {images.slice(0, 6).map((item, index) => (
                 <div
@@ -189,7 +192,8 @@ function Home() {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
+          <NewestProduct />
         </div>
 
         <div className="w-screen h-[30%]">

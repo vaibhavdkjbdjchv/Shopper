@@ -16,6 +16,7 @@ function SelectedProduct() {
   }
 
   const [returnActive, setReturnActive] = useState(false);
+  const [mainImage, setMainImage] = useState(product.image[0]);
 
   return (
     <div className="w-screen h-screen">
@@ -30,22 +31,35 @@ function SelectedProduct() {
       <div className="w-[90%] h-[88%] py-5 flex gap-10 justify-center ">
         <div className="flex h-[80%] gap-10">
           <div className="h-full overflow-scroll flex flex-col justify-between items-center gap-5">
-            <img src={product.src} alt={product.name} className="w-30 h-auto" />
-            <img src={product.src} alt={product.name} className="w-30 h-auto" />
-            <img src={product.src} alt={product.name} className="w-30 h-auto" />
-            <img src={product.src} alt={product.name} className="w-30 h-auto" />
+            {product.image.map((img, index) => (
+              <img
+                key={index}
+                src={img}
+                alt={`thumb-${index}`}
+                className="w-30 h-auto cursor-pointer rounded-xl border hover:border-black duration-200"
+                onClick={() => setMainImage(img)}
+              />
+            ))}
           </div>
           <div>
-            <img src={product.src} alt={product.name} className="h-full" />
+            <img
+              src={mainImage}
+              alt={product.name}
+              className="h-full rounded-3xl"
+            />
           </div>
         </div>
         <div className="w-[35%] ">
           <h2 className="text-6xl uppercase font-bold mt-4">{product.name}</h2>
           <p className="text-gray-600 mt-2 text-lg">{product.description}</p>
           <div className="flex gap-2">
-            <p className="text-3xl font-bold mt-4">{product.price}</p>
-            <p className="text-lg text-gray-600 line-through mt-4">$80</p>
-            <p className="text-lg text-green-600 font-bold  mt-4">20% Off</p>
+            <p className="text-3xl font-bold mt-4">₹{product.price}</p>
+            <p className="text-lg text-gray-600 line-through mt-4">
+              {product.marketPrice}
+            </p>
+            <p className="text-lg text-green-600 font-bold mt-4">
+              {product.discount}%
+            </p>
           </div>
           <div className="flex gap-5 py-5">
             <button className="border px-5 text-lg hover:bg-gray-500 hover:text-white rounded-4xl">

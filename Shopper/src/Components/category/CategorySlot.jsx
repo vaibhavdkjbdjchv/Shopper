@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { CategoryContext } from "./CategoryContext";
-const categories = ["shirt", "pants", "shoes", "beg", "watches", "goggles", "women"];
+const categories = ["mens", "pants", "shoes", "beg", "watches", "goggles", "women"];
 
 function CategorySlot() {
   const { selectedCategory, setSelectedCategory } = useContext(CategoryContext);
