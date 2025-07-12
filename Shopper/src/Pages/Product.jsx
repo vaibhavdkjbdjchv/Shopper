@@ -2,71 +2,73 @@ import React from "react";
 import SearchbBar from "../Components/searchbar/SearchbBar";
 import { FaStar } from "react-icons/fa";
 import TopProduct from "../Components/topProduct/TopProduct";
-import images from "../assets/Images/images";
 import CategorySlot from "../Components/category/CategorySlot";
 import Products from "../Components/Product/Product";
-import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Navbar from "../Components/Navbar/Navbar";
 import Contect from "../Components/Navbar/Contect";
 import Footer from "../Components/Footer/Footer";
 
 function Product() {
   return (
-    <div className="w-screen h-screen">
-      <div className="w-full h-[12%] flex flex-col items-center justify-between">
-        <div className="w-full bg h-[30%] bg-[#ffefb0f5] flex  bg-[] items-center justify-between">
+    <div className="w-full overflow-hidden">
+      {/* Header */}
+      <div className="w-full flex flex-col">
+        <div className="w-full bg-[#ffefb0f5]">
           <Contect />
         </div>
-        <div className="w-full h-[70%]  flex items-center justify-between">
-          <Navbar />
-        </div>
+        <Navbar />
       </div>
-      <div className="w-full h-[15%]   flex justify-center items-center ">
+
+      {/* Search Bar */}
+      <div className="w-full py-4 flex justify-center items-center">
         <SearchbBar />
       </div>
-      <div className="w-full h-[30%] flex flex-col justify-center items-center gap-5 py-5">
-        <h1 className="text-3xl font-bold h-[20%] flex justify-center items-center text-center">
-          Top Products
-        </h1>
-        <div className="h-[90%]  w-full flex justify-center items-center ">
-          <div className="w-[95%] h-full px-5 scroll-smooth flex  justify-between py-5 items-center gap-4">
-            <TopProduct />
-          </div>
+
+      {/* Top Products */}
+      <div className="w-full py-6 flex flex-col items-center gap-4">
+        <h1 className="text-3xl font-bold text-center">Top Products</h1>
+        <div className="w-[95%] flex justify-center">
+          <TopProduct />
         </div>
       </div>
-      <div className="w-[90%] h-[20%] bg-gradient-to-r from-[#faf2b1]  to-[#fbf6e9] rounded-xl flex items-center justify-between px-30 py-4  mx-auto mt-10">
-        {/* Left Section */}
+
+      {/* Summer Collection Banner */}
+      <div className="w-[95%] mx-auto mt-10 bg-gradient-to-r from-[#faf2b1] to-[#fbf6e9] rounded-xl flex flex-col md:flex-row items-center justify-between p-6 gap-4">
         <div className="flex items-center gap-4">
           <div className="bg-[#f1daca] p-3 rounded-full text-[#c1956c]">
             <FaStar className="text-4xl" />
           </div>
           <div>
-            <h2 className="font-bold text-4xl  text-black">
+            <h2 className="font-bold text-2xl md:text-4xl text-black">
               Summer Collection is Live!
             </h2>
-            <p className="text-lg text-gray-700">
-              Grab flat <span className="font-medium text-black">20% off</span>{" "}
-              on Women Tops & Shirts.
+            <p className="text-base md:text-lg text-gray-700">
+              Grab flat <span className="font-medium text-black">20% off</span> on Women Tops & Shirts.
             </p>
           </div>
         </div>
-
-        {/* Right Button */}
-        <button className="bg-black text-white text-2xl px-10 py-2 rounded-full hover:bg-gray-800 transition-all duration-300">
+        <button className="bg-black text-white text-lg md:text-2xl px-6 py-2 rounded-full hover:bg-gray-800 transition-all duration-300">
           Shop Now
         </button>
       </div>
-      <div className="w-full h-[20%] py-10 flex flex-col gap-5 justify-center items-center">
-        <h1 className="text-3xl font-bold">More Products Coming Soon!</h1>
-        <div className="flex flex-wrap justify-evenly items-center gap-4 w-full h-full">
+
+      {/* Category Section */}
+      <div className="w-full py-10 flex flex-col gap-5 items-center">
+        <h1 className="text-3xl font-bold text-center">More Products Coming Soon!</h1>
+        <div className="flex flex-wrap justify-center gap-4 w-full px-4">
           <CategorySlot />
         </div>
       </div>
-      <div className="w-full  flex flex-col justify-center items-center">
+
+      {/* Products Grid */}
+      <div className="w-full flex flex-col items-center">
         <Products />
       </div>
-      <div className="w-screen h-[30%]">
+
+      {/* Footer */}
+      <div className="w-full">
         <Footer />
       </div>
     </div>
