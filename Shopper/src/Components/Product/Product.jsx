@@ -13,7 +13,7 @@ function Products() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/api/AllProduct");
+        const res = await axios.get("https://shopper-1-gx2u.onrender.com/api/AllProduct");
         setProducts(res.data);
       } catch (error) {
         console.error("❌ Error fetching products:", error);

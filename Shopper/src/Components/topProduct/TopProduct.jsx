@@ -29,7 +29,7 @@ function TopProduct() {
   useEffect(() => {
     const fetchTopProducts = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/api/top-products");
+        const res = await axios.get("https://shopper-1-gx2u.onrender.com/api/top-products");
         setTopProducts(res.data);
       } catch (error) {
         console.error("❌ Failed to fetch top products:", error);

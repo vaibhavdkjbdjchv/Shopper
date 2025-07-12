@@ -51,7 +51,7 @@ const AddProduct = () => {
         imgForm.append("image", file);
 
         const uploadRes = await axios.post(
-          "http://localhost:3000/upload",
+          "https://shopper-1-gx2u.onrender.com/upload",
           imgForm,
           {
             headers: {
@@ -69,7 +69,7 @@ const AddProduct = () => {
       };
 
       const response = await axios.post(
-        "http://localhost:3000/api/Allproduct",
+        "https://shopper-1-gx2u.onrender.com/api/Allproduct",
         productData,
         {
           headers: {
