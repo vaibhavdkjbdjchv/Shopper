@@ -42,7 +42,7 @@ function NewProduct() {
             <h2 className="mt-3 text-xl font-bold uppercase text-center">
               {item.name}
             </h2>
-            <p className="text-sm text-gray-500 mt-2 text-center">
+            <p className="text-sm h-20 overflow-scroll text-gray-500 mt-2 text-center">
               {item.description}
             </p>
             <p className="mt-2 text-lg font-bold text-gray-800">
