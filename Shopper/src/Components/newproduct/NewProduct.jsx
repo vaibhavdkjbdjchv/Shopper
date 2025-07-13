@@ -9,7 +9,7 @@ function NewProduct() {
   useEffect(() => {
     const fetchNewestProducts = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/api/newest-products");
+        const res = await axios.get("https://shopper-1-gx2u.onrender.com/api/newest-products");
         setNewestProducts(res.data);
       } catch (error) {
         console.error("❌ Failed to fetch newest products:", error);
